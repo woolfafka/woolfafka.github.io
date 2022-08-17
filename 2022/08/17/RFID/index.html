@@ -47,15 +47,15 @@ MathJax.Hub.Queue(function() {
 <li>在RFID系统工作的信道中存在有三种事件模型：<strong>以能量提供为基础的事件模型，以时序方式提供数据交换的事件模型，以数据交换为目的的事件模型</strong>。</li>
 <li>时序指的是读写器和电子标签的工作次序。通常有两种时序：一种是<strong>TTF</strong>，另一种是<strong>RTF</strong>。</li>
 <li>读写器和电子标签通过各自的天线构建了二者之间的非接触信息传输通道。根据观测点与天线之间的距离由近及远可以将天线周围的场划分为三个区域：<strong>非辐射场区，辐射近场区，辐射远场区</strong>。</li>
-<li>上一题中第二个场区与第三个场区的分界距离 $R$ 为      。<strong>已知天线直径为 $D$，天线波长为 $\lambda$。</strong></li>
+<li>上一题中第二个场区与第三个场区的分界距离 $R$ 为 $\frac{2D^2}{\lambda}$，已知天线直径为 $D$，天线波长为 $\lambda$。</li>
 <li>在 RFID 系统中，读写器与电子标签之间能量与数据的传递都是利用耦合元件实现的，RFID 系统中的耦合方式有两种：<strong>电感耦合式，电磁反向散射耦合式</strong>。</li>
 <li>读写器和电子标签之间的数据交换方式也可以划分为两种，分别是<strong>负载调制，反向散射调制</strong>。</li>
 <li>按照射频识别系统的基本工作方式来划分，可以将射频识别系统分为<strong>全双工，半双工，时序系统</strong>。</li>
-<li>读写器天线发射出去的电磁波是以球面波的形式向外空间传播的，所以距离读写器 $R$ 处的电子标签的功率密度为 $S=\frac{P<em>{TX}G</em>{TX}}{4\pi R^2}$，其中读写器多发射功率为 $P<em>{TX}$，读写器发射天线的增益为 $G</em>{TX}$，电子标签与读写器之间的距离为 $R$。</li>
+<li>读写器天线发射出去的电磁波是以球面波的形式向外空间传播的，所以距离读写器 $R$ 处的电子标签的功率密度为$S=\frac{PG}{4\pi R^2}$，其中读写器多发射功率为 $P$，读写器发射天线的增益为 $G$，电子标签与读写器之间的距离为 $R$。</li>
 <li>按照读写器和电子标签之间的作用距离可以将射频识别系统划分为三类：<strong>密耦合系统，远耦合系统，远距离系统</strong>。</li>
 <li>典型的读写器终端一般由<strong>天线，射频模块，逻辑控制模块</strong>三部分构成。</li>
 <li>控制系统和应用软件之间的数据交换主要通过读写器的接口来完成。一般读写器的 I/O 接口形式主要有：<strong>USB，WLAN，以太网接口，RS-232 串行接口，RS-485 串行接口</strong>。</li>
-<li>随着 RFID 技术的不断发展，越来越多的应用对 RFID 系统的读写器也提出了更高的要求，未来的读写器也将朝着**多功能，小型化，便携式，嵌入式，模块化的方向发展。</li>
+<li>随着 RFID 技术的不断发展，越来越多的应用对 RFID 系统的读写器也提出了更高的要求，未来的读写器也将朝着<strong>多功能，小型化，便携式，嵌入式，模块化的方向发展</strong>。</li>
 <li>从功能上来说，电子标签一般由<strong>天线，调制器，编码发生器，时钟，存储电路组成</strong>。</li>
 <li>读写器之所以非常重要，这是由它的功能所决定的，它的主要功能有<strong>与电子标签通信，标签供能，多标签识别，移动目标识别</strong>。</li>
 <li>根据电子标签工作时所需的能量来源，可以将电子标签分为<strong>有源标签，无源标签两种</strong>。</li>
@@ -95,7 +95,7 @@ MathJax.Hub.Queue(function() {
 <h1 id="判断题"><a href="#判断题" class="headerlink" title="判断题"></a>判断题</h1><ol>
 <li>Frequency Identification 的缩写，即无线射频识别。<strong>yes</strong></li>
 <li>物联网的感知层主要包括：二维码标签，读写器，RFD标签，摄像头，GPS传感器，M-M 终端。<strong>no</strong></li>
-<li>13.56MHZ，125kHz，433MHz都是 RFID 系统典型的工作频率<strong>yes</strong></li>
+<li>13.56MHZ，125kHz，433MHz都是 RFID 系统典型的工作频率。<strong>yes</strong></li>
 <li>在物联网节点之间做通信的时候，通信频率越高，意味着传输距离越远。<strong>no</strong></li>
 <li>物联网标准体系可以根据物联网技术体系的框架进行划分，即分为感知延伸层标准，网络层标准，应用层标准和共性支撑标准。<strong>yes</strong></li>
 <li>在物联网中，系统可以自动的，实时的对物体进行识别，追踪和监控，但不可以触发相应的事件。<strong>no</strong></li>
@@ -282,7 +282,7 @@ MathJax.Hub.Queue(function() {
 </ol>
 <h1 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a>简答题</h1><ol>
 <li><p>简述无源 RFID 系统的工作过程。</p>
-<p> RFID 无源系统是指 RFID 电子标签不带电池的又 RFID 读写器和 RFID 无源电子标签组成的识别系统。一套完整 RFID 系统由读写器与电子标签两部份组成 ,其工作原理为由读写器发射一特定频率之无线电波能量给电子标签，用以驱动电子标签电路将内部之 ID Code<strong>即全球唯一编号和数据</strong>送出，此时读写器便接收此 ID Code。</p>
+<p> RFID 无源系统是指 RFID 电子标签不带电池的又 RFID 读写器和 RFID 无源电子标签组成的识别系统。一套完整 RFID 系统由读写器与电子标签两部份组成 ,其工作原理为由读写器发射一特定频率之无线电波能量给电子标签，用以驱动电子标签电路将内部之 ID Code（即全球唯一编号和数据）送出，此时读写器便接收此 ID Code。</p>
 </li>
 <li><p>简述对称加密算法和非对称加密算法的区别。</p>
 <p> 对称加密的加密和解密密钥都是一样的。而非对称加密的加密和解密密钥是不一样的。它们的算法也是不同的。</p>
@@ -329,4 +329,4 @@ MathJax.Hub.Queue(function() {
 <p>g. 负载均衡，根据每个服务器的负载自动进行流量分配以提高整个系统的处理能力。</p>
 </li>
 </ol>
-</div></article><div class="post-view__sidebar"><div class="sidebar"><div class="tocbot"><h2>Toc</h2><div class="toc__content"></div></div><h2>Links</h2><div class="sidebar__link"><ul><li><a target="_blank" rel="noopener" href="https://github.com/Mi-X-Lab">Github</a></li><li><a href="mailto:freshtimeofe@yeah.net">Mail</a></li></ul></div><h2>Archives</h2><div class="sidebar__archives"><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a></li></ul></div><h2>Categories</h2><div class="sidebar__categories"><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Examination/">Examination</a></li></ul></div><h2>Tags</h2><div class="sidebar__tags"><ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RFID/" rel="tag">RFID</a></li></ul></div></div></div></div><div class="horizontal-line" style="height: 1px"></div><div class="main__bottom"><div class="pre-next"><a class="pre-button">没有更多</a><a class="next-button" href="/2022/08/17/hello-world/">Hello World</a></div></div></div></div><div class="footer"><span>©️2019-2022 Designed By&nbsp;<strong><a target="_blank" rel="noopener" href="https://github.com/random-yang">RandomYang</a></strong> Powered By&nbsp;</span><strong><a target="_blank" rel="noopener" href="https://hexo.io">hexo</a></strong></div><div class="darkmode-mask" id="darkmode-mask"></div><div class="sidebar__button"></div></body></html>
+</div></article><div class="post-view__sidebar"><div class="sidebar"><div class="tocbot"><h2>Toc</h2><div class="toc__content"></div></div><h2>Links</h2><div class="sidebar__link"><ul><li><a target="_blank" rel="noopener" href="https://github.com/Mi-X-Lab">Github</a></li><li><a href="mailto:freshtimeofe@yeah.net">Mail</a></li></ul></div><h2>Archives</h2><div class="sidebar__archives"><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a></li></ul></div><h2>Categories</h2><div class="sidebar__categories"><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Examination/">Examination</a></li></ul></div><h2>Tags</h2><div class="sidebar__tags"><ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RFID/" rel="tag">RFID</a></li></ul></div></div></div></div><div class="horizontal-line" style="height: 1px"></div><div class="main__bottom"><div class="pre-next"><a class="pre-button">没有更多</a><a class="next-button">没有更多</a></div></div></div></div><div class="footer"><span>©️2019-2022 Designed By&nbsp;<strong><a target="_blank" rel="noopener" href="https://github.com/random-yang">RandomYang</a></strong> Powered By&nbsp;</span><strong><a target="_blank" rel="noopener" href="https://hexo.io">hexo</a></strong></div><div class="darkmode-mask" id="darkmode-mask"></div><div class="sidebar__button"></div></body></html>
