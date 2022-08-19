@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"><meta name="description" content="New Adventure - Wolfafka"><meta name="theme-color" content="#ffa259"><title>New Adventure - Wolfafka</title><style>@font-face {
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"><meta name="description" content="置换算法 - Wolfafka"><meta name="theme-color" content="#ffa259"><title>置换算法 - Wolfafka</title><style>@font-face {
   font-family: 'Abril Fatface';
   font-style: normal;
   font-weight: 400;
@@ -40,21 +40,55 @@ MathJax.Hub.Queue(function() {
   for(i=0; i < all.length; i += 1) {
       all[i].SourceElement().parentNode.className += ' has-jax';
   }
-});</script><link rel="preload" href="https://cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css"><link rel="preload" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap"><meta name="generator" content="Hexo 6.2.0"></head><body><div class="mask-border"></div><div class="head"><div class="head__inner"><h1><a href="/">Wolfafka</a></h1><p>About 99% of the time, the right time is right now.</p></div></div><div class="paper-container"><div class="main"><div class="location-bar"><div class="line-1"><div class="horizontal-line" style="height: 3px"></div></div><div class="line-2"><div class="horizontal-line" style="height: 1px"></div></div><p class="text">New Adventure</p><div class="switch-button"><input class="container_toggle" type="checkbox" id="switch" name="mode"><label for="switch">Toggle</label></div><div class="line-3"><div class="horizontal-line" style="height: 1px"></div></div></div><div class="main__2-col"><article class="post-view__article"><div class="article__infomation"><div class="posts-item"><h2 class="posts-item__title"><a href="">New Adventure</a></h2><span class="post__date">2022-08-18</span></div></div><div class="article__content"><h1 id="New-Adventure"><a href="#New-Adventure" class="headerlink" title="New Adventure"></a>New Adventure</h1><p>虽然今天风很大，但是也挺热的，当然还是比南方凉快了许多。</p>
-<p>同往日一样，还是五点多就醒了，宿舍外面的施工队起的可比咱大学生早多了。六点多洗漱之后就去食堂吃了个早餐，糯米红豆饼真的很不错。我可怜的发型，用了许多发胶终于定了型，奈何风一吹，就变了另外的一个鬼样。</p>
-<p>昨天图书馆对面坐着一个同年级的计科人，今天对面的那个不是计科的就是软件学院的，果然图书馆三楼 B 区计软的人是真多。也没得办法啦，谁让计算机一类的书都放在这个区域呢？</p>
-<p>中午吃饭的时候，顺便去了室内的那个咖啡馆问了店内招聘的事情，店长让下午三点培训一下。于是乎，我给自己安排好了整个行程。</p>
+});</script><link rel="preload" href="https://cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css"><link rel="preload" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap"><meta name="generator" content="Hexo 6.2.0"></head><body><div class="mask-border"></div><div class="head"><div class="head__inner"><h1><a href="/">Wolfafka</a></h1><p>About 99% of the time, the right time is right now.</p></div></div><div class="paper-container"><div class="main"><div class="location-bar"><div class="line-1"><div class="horizontal-line" style="height: 3px"></div></div><div class="line-2"><div class="horizontal-line" style="height: 1px"></div></div><p class="text">置换算法</p><div class="switch-button"><input class="container_toggle" type="checkbox" id="switch" name="mode"><label for="switch">Toggle</label></div><div class="line-3"><div class="horizontal-line" style="height: 1px"></div></div></div><div class="main__2-col"><article class="post-view__article"><div class="article__infomation"><div class="posts-item"><h2 class="posts-item__title"><a href="">置换算法</a></h2><span class="post__date">2022-08-19</span></div></div><div class="article__content"><p>页面置换有局部置换（local replacement）和全局置换（global replacement）之分，局部置换在当前缺页进程的页框集合中选择淘汰页面，全局置换在内存的所有页框集合中选择淘汰页面。</p>
+<h2 id="最佳算法-Optimal-OPT"><a href="#最佳算法-Optimal-OPT" class="headerlink" title="最佳算法 Optimal / OPT"></a>最佳算法 Optimal / OPT</h2><blockquote>
+<p>理想很丰满，现实很骨感。</p>
+</blockquote>
+<p>淘汰以后不再需要的或者在最长时间以后才会用到的页面。然而该算法不能实现。</p>
+<h2 id="先进先出算法-First-in-First-out-FIFO"><a href="#先进先出算法-First-in-First-out-FIFO" class="headerlink" title="先进先出算法 First-in First-out / FIFO"></a>先进先出算法 First-in First-out / FIFO</h2><p>淘汰最先进入内存的页面。</p>
+<h2 id="最近最少使用算法-Least-Recently-Used-LRU"><a href="#最近最少使用算法-Least-Recently-Used-LRU" class="headerlink" title="最近最少使用算法 Least Recently Used / LRU"></a>最近最少使用算法 Least Recently Used / LRU</h2><p>淘汰最后一次访问时间距离当前时间间隔最长的页面。</p>
+<h2 id="最近不用先淘汰-Not-Used-Recently-NUR"><a href="#最近不用先淘汰-Not-Used-Recently-NUR" class="headerlink" title="最近不用先淘汰 Not Used Recently / NUR"></a>最近不用先淘汰 Not Used Recently / NUR</h2><p>淘汰最近一段时间未被用过的页面。</p>
+<h2 id="最不经常使用算法-Least-Frequently-Used-LFU"><a href="#最不经常使用算法-Least-Frequently-Used-LFU" class="headerlink" title="最不经常使用算法 Least Frequently Used / LFU"></a>最不经常使用算法 Least Frequently Used / LFU</h2><p>淘汰访问次数最少的页面。</p>
+<h2 id="最频繁使用算法-Most-Frequently-Used-MFU"><a href="#最频繁使用算法-Most-Frequently-Used-MFU" class="headerlink" title="最频繁使用算法 Most Frequently Used / MFU"></a>最频繁使用算法 Most Frequently Used / MFU</h2><p>淘汰访问次数最少的页面。</p>
+<h2 id="二次机会算法-Second-Chance"><a href="#二次机会算法-Second-Chance" class="headerlink" title="二次机会算法 Second Chance"></a>二次机会算法 Second Chance</h2><p>淘汰装入最久且最近未被访问的页面。</p>
+<h2 id="时钟算法-Clock"><a href="#时钟算法-Clock" class="headerlink" title="时钟算法 Clock"></a>时钟算法 Clock</h2><h3 id="基本时钟算法"><a href="#基本时钟算法" class="headerlink" title="基本时钟算法"></a>基本时钟算法</h3><p>将页面组织成环状，效果与二次机会算法类似，只是采用了不同的数据结构。</p>
+<h3 id="改进时钟算法"><a href="#改进时钟算法" class="headerlink" title="改进时钟算法"></a>改进时钟算法</h3><p>每个页面置引用位 $r$ 和修改位 $m$。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">r</th>
+<th style="text-align:center">m</th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">最佳淘汰</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">淘汰前必须写入外存储器</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">不淘汰</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">不淘汰</td>
+</tr>
+</tbody>
+</table>
+</div>
 <ol>
-<li>13:30 骑单车去逸夫楼取书，上学期落下来的书已经逾期 4 个月了，实在是该还了。</li>
-<li>14:00 回寝室，收拾一下东西，准备去浴室洗澡。</li>
-<li>14:30 骑单车去图书馆还书并且清算欠款。</li>
-<li>14:40 去参加咖啡馆的培训。</li>
+<li>由指针当前位置扫描，选择最佳淘汰页面，不改变引用位。</li>
+<li>如果第一步失败，则从原位置开始寻找 $r=0,m=1$ 的页面，将该页面淘汰，并且扫描过的页面引用位置 0。</li>
+<li>如果第二步失败，则指针从原位置再次执行第一步。</li>
 </ol>
-<p>本以为一切都能顺顺利利，然而实际上的情况是，我迟到了！</p>
-<p>这一切都要怪罪于那该死的共享单车。真的是祸不单行，洗澡之前，一切都按照自己的预期执行着。洗完澡，我准备去吹头发，奈何手机信号实在是不行，扫码扫了半天都没有反应过来。不过最后还是让我给搞好了。吹完头发，出了浴室门，我发现门口没有一个共享单车了。于是穿着拖鞋走到了日新楼，本以为看到了希望，但是那仅余的几辆单车全都有故障，不能骑行，唯一的两辆还刚好被两个女生骑走了。于是我继续徒步旅行，走到了南苑某一宿舍楼下，仅有的那个单车还是有故障，等待了一会儿，终于碰到一个人刚停下了车，我抢着扫了码。回宿舍的旅途暂时告一段落。</p>
-<p>回到宿舍之后，我便急急忙忙把头发重新扎住了，拿起书就走出宿舍。结果，刚刚停下的那个车子又消失不见了。于是乎又开始了去女生宿舍的旅程，真的是神奇，我离远处明明看到了好多单车，但是离近了一看，仅有两辆，而且都被女生占着了。此时已经 14:54 分了。我又飞奔到了湖畔食堂，看到面前停了好多辆，惊喜万分。然而事实是，没有一个是能骑的。此时已经 14:57。我实在是绝望了。一路飞奔到图书馆，一路上看到那么多单车载着人在我眼前晃着，我实在有想破口大骂，并且抢走单车的邪恶欲望。</p>
-<p>15:02 我到了咖啡厅。</p>
-<p>这实在是让人难以忘怀的一段旅程，而且更气人的是，洗澡之前，我刚买了月卡！</p>
-<p>不过唯一的一件开心的事情是，我成功地获得了咖啡厅店员的工作机会，以后还有可能自己做咖啡奥。</p>
-<p>今天给我的教训就是，永远要提前规划好行程，并想好备用计划，不要踩着点！谁知道中途会发生什么事情呢？</p>
-</div></article><div class="post-view__sidebar"><div class="sidebar"><div class="tocbot"><h2>Toc</h2><div class="toc__content"></div></div><h2>Links</h2><div class="sidebar__link"><ul><li><a target="_blank" rel="noopener" href="https://github.com/Mi-X-Lab">Github</a></li><li><a href="mailto:freshtimeofe@yeah.net">Mail</a></li></ul></div><h2>Archives</h2><div class="sidebar__archives"><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a></li></ul></div><h2>Categories</h2><div class="sidebar__categories"><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Operating-System/">Operating System</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/RFID/">RFID</a></li></ul></div><h2>Tags</h2><div class="sidebar__tags"></div></div></div></div><div class="horizontal-line" style="height: 1px"></div><div class="main__bottom"><div class="pre-next"><a class="pre-button" href="/2022/08/19/202208191856/">置换算法</a><a class="next-button" href="/2022/08/17/202208162004/">RFID 复习题</a></div></div></div></div><div class="footer"><span>©️2019-2022 Designed By&nbsp;<strong><a target="_blank" rel="noopener" href="https://github.com/random-yang">RandomYang</a></strong> Powered By&nbsp;</span><strong><a target="_blank" rel="noopener" href="https://hexo.io">hexo</a></strong></div><div class="darkmode-mask" id="darkmode-mask"></div><div class="sidebar__button"></div></body></html>
+</div></article><div class="post-view__sidebar"><div class="sidebar"><div class="tocbot"><h2>Toc</h2><div class="toc__content"></div></div><h2>Links</h2><div class="sidebar__link"><ul><li><a target="_blank" rel="noopener" href="https://github.com/Mi-X-Lab">Github</a></li><li><a href="mailto:freshtimeofe@yeah.net">Mail</a></li></ul></div><h2>Archives</h2><div class="sidebar__archives"><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a></li></ul></div><h2>Categories</h2><div class="sidebar__categories"><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Operating-System/">Operating System</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/RFID/">RFID</a></li></ul></div><h2>Tags</h2><div class="sidebar__tags"></div></div></div></div><div class="horizontal-line" style="height: 1px"></div><div class="main__bottom"><div class="pre-next"><a class="pre-button">没有更多</a><a class="next-button" href="/2022/08/18/202208182001/">New Adventure</a></div></div></div></div><div class="footer"><span>©️2019-2022 Designed By&nbsp;<strong><a target="_blank" rel="noopener" href="https://github.com/random-yang">RandomYang</a></strong> Powered By&nbsp;</span><strong><a target="_blank" rel="noopener" href="https://hexo.io">hexo</a></strong></div><div class="darkmode-mask" id="darkmode-mask"></div><div class="sidebar__button"></div></body></html>
